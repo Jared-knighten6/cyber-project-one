@@ -44,19 +44,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1    | Linux            |
-| Web 1    |          | 10.0.0.7    |                  |
-| Web 2    |          | 10.0.0.8    |                  |
-| Web 3    |          | 10.0.0.9    |                  |
 |  Name |  Function | IP Address  | OS  |   |
 |---|---|---|---|---|
-| Jump Box  |   |   |   |   |
-| Web 1 DVWA |   |   |   |   |
-|  Web 2 DVWA |   |   |   |   |
-| Web 3 DVWA  |   |   |   |   |
-| ELK-SERVER  |   |   |   |   |
+| Jump Box  | Gateway  |   |   |   |
+| Web 1 DVWA | Server  |   |   |   |
+|  Web 2 DVWA | Server  |   |   |   |
+| Web 3 DVWA  | Server  |   |   |   |
+| ELK-SERVER  | Monitoring The Servers  |   |   |   |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
