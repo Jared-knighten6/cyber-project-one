@@ -52,11 +52,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web 3    |          | 10.0.0.9    |                  |
 |  Name |  Function | IP Address  | OS  |   |
 |---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| Jump Box  |   |   |   |   |
+| Web 1 DVWA |   |   |   |   |
+|  Web 2 DVWA |   |   |   |   |
+| Web 3 DVWA  |   |   |   |   |
+| ELK-SERVER  |   |   |   |   |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
