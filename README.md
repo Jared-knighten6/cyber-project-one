@@ -51,6 +51,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 |  Web 2 DVWA | Server  | 10.0.0.8  | Linux  | |
 | Web 3 DVWA  | Server  | 10.0.0.9  | Linux  | |
 | ELK-SERVER  | Monitoring The Servers  | 10.1.0.4  | Linux  | |
+
+| Name   | Function  | IP Address   | OS  |   |
+|---|---|---|---|---|
+| Jump Box   | Gateway  | 10.0.0.4  | Linux   |   |
+| Web 1 DVWA   | Server   | 10.0.0.7   | Linux   |   |
+| Web 2 DVWA  | Server   | 10.0.0.8   | Linux   |   |
+| Web 3 DVWA   | Server   | 10.0.0.9  | Linux   |   |
+| ELK-SERVER   | Monitoring The Servers  |  10.1.0.4  | Linux   |   |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
