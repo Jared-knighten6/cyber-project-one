@@ -42,7 +42,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
   processed by Logstash, and can be viewed and analyzed with Kibana.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name   | Function  | IP Address   | OS  |   |
 |---|---|---|---|---|
@@ -56,11 +55,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- The Jump Box Machine may be accessed from IP address 40.76.36.106
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the jump box.
+- The ELK server may be accessed from the Jump Box Machine // 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -70,6 +69,13 @@ A summary of the access policies in place can be found in the table below.
 |          |                     |                      |
 |          |                     |                      |
 
+|  Name  | Publicly Accessible  | Allowed IP Addresses  |
+|---|---|---|
+| Jump Box  | Yes  | 40.76.36.106  |
+| Web 1 DVWA   | No  | 10.0.0.4  |
+|  Web 2 DVWA | No  | 10.0.0.4  |
+| Web 3 DVWA   | No  | 10.0.0.4  |
+| ELK-SERVER   | No  | 10.0.0.4  |
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
