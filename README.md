@@ -34,8 +34,12 @@ Load balancing ensures that the application will be highly accessible, in additi
   a more secure network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them
+  either to Elasticsearch or Logstash for indexing. The data can be viewed and analyzed with Kibana.
+  
+- Metricbeat collects metrics from the operating system and from services running on the server.
+  Metricbeat then takes the metrics and statistics that it collects and ships them to Elasticsearch to be
+  processed by Logstash, and can be viewed and analyzed with Kibana.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -46,7 +50,13 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web 1    |          | 10.0.0.7    |                  |
 | Web 2    |          | 10.0.0.8    |                  |
 | Web 3    |          | 10.0.0.9    |                  |
-
+|  Name |  Function | IP Address  | OS  |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
