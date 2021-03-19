@@ -89,8 +89,6 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 | Name  | IP Address  |
@@ -136,9 +134,9 @@ SSH into the control node and follow the steps below:
 
 - To make Ansible run the playbook on a certain machine, you'll need to update the the "/etc/ansible/hosts" file to include: 
 
-- Group Name -- [webservers] // [elk]
+  - Group Name -- [webservers] // [elk]
 
-- Private IP addresses of the disired webservers & Location of Python 3 Interpreter -- "YourWebseversIP(x.x.x.x) ansible_python 3 interpreter"
+  - Private IP addresses of the disired webservers & Location of Python 3 Interpreter -- "YourWebseversIP(x.x.x.x) ansible_python 3 interpreter"
 
 - To run playbooks "ansible-playbook [Name_of_playbook.yml"
 
