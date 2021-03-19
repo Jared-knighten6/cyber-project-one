@@ -138,7 +138,7 @@ SSH into the control node and follow the steps below:
 
   - Private IP addresses of the disired webservers & Location of Python 3 Interpreter -- "YourWebseversIP(x.x.x.x) ansible_python 3 interpreter"
 
-- To run playbooks "ansible-playbook [Name_of_playbook.yml"
+- To run playbooks "ansible-playbook "[Name_of_playbook].yml"
 
 - After running each playbook you now can go to your ELK-SERVER
 
