@@ -74,15 +74,18 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+
 -  Automating configuration with ansible ensures provisioning scripts run identically everywhere,
   every time they run. This eliminates as much variability between configurations as possible,
   and allows for easy installation of multiple versions of a tool(s) to be used at the same time
   accross different projects.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Configure Elk VM with Docker
+- Install pip3
+- Install Docker python module
+- Install docker.io
+- Download and launch a Docker elk container sebp/elk:761
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -119,16 +122,16 @@ SSH into the control node and follow the steps below:
    - nano filebeat-config.yml
    - go to line 1106 & 1806
    - Update these lines with the ELk-SERVERS IP
-              Next
+              
+        --------Next-------
               
     - nano metricbeat-config.yml
     - go to line 62 & 96
     - Update these lines with the ELk-SERVERS IP
     
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
 - Copy Filebeat-playbook.yml to "/etc/ansible"
+
 - Copy Metricbeat-playbook.yml to "/etc/ansible"
 
 - To make Ansible run the playbook on a certain machine, you'll need to update the the "/etc/ansible/hosts" file to include: 
