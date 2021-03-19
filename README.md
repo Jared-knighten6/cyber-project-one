@@ -101,19 +101,44 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat plays the role of the logging agent; installed on the machine generating the log files,
+  tailing them, and forwarding the data to either Logstash for more advanced processing or directly
+  into Elasticsearch for indexing.
+  
+  - Metricbeat is used for monitoring server performance within an environment, as well as
+  different external services running on them. Like, Metricbeat can be used to monitor and
+  analyze system CPU, memory and load.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- Copy the Filebeat and Metricbeat configuration files to '/etc/ansible/'
+- Update the configuration files to include your ELK-SERVER's private IP address: 
+  
+   - nano filebeat-config.yml
+   - go to line 1106 & 1806
+   - Update these lines with the ELk-SERVERS IP
+              Next
+              
+    - nano metricbeat-config.yml
+    - go to line 62 & 96
+    - Update these lines with the ELk-SERVERS IP
+    
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Copy Filebeat-playbook.yml to "/etc/ansible"
+- Copy Metricbeat-playbook.yml to "/etc/ansible"
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- To make Ansible run the playbook on a certain machine, you'll need to update the the "/etc/ansible/hosts" file to include: 
+
+- Group Name -- [webservers] // [elk]
+
+- Private IP addresses of the disired webservers & Location of Python 3 Interpreter -- "YourWebseversIP(x.x.x.x) ansible_python 3 interpreter"
+
+- To run playbooks "ansible-playbook [Name_of_playbook.yml"
+
+- After running each playbook you now can go to your ELK-SERVER
+
+- Address of ELK-SERVER - http://[your.ELK-VM.External.IP]:5601/app/kibana
